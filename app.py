@@ -192,7 +192,18 @@ if run:
         df['Close_lag5'] = df['Close'].shift(5)
         df['Return'] = df['Close'].pct_change()
         df['Target_Return'] = df['Return'].shift(-1)
+
+        # Replace any inf/-inf produced by pct_change, RSI, etc. with NaN,
+        # then drop rows with missing data so MinMaxScaler never sees inf.
+        df.replace([np.inf, -np.inf], np.nan, inplace=True)
         df.dropna(inplace=True)
+
+        if df.empty or len(df) < 30:
+            st.error(
+                "Not enough clean data was returned for this ticker/date range "
+                "to train a model. Try a wider date range or a different stock."
+            )
+            st.stop()
 
         # ── Price chart ──
         st.markdown('<div class="section-header">Price History</div>', unsafe_allow_html=True)
