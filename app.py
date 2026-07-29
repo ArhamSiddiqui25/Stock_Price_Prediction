@@ -154,7 +154,7 @@ with st.sidebar:
     run = st.button("Run Prediction")
 
     st.markdown("---")
-    st.markdown('<div style="font-size:0.75rem; color:#6B4F2E; text-align:center;">Built by Zaara Riyaz Khan<br>Amity University Lucknow<br>NTCC 2024</div>', unsafe_allow_html=True)
+    st.markdown('<div style="font-size:0.75rem; color:#6B4F2E; text-align:center;">Built by Arham Siddiqui<br>Amity University Lucknow<br>NTCC 2024</div>', unsafe_allow_html=True)
 
 # ── Chart helper ─────────────────────────────────────────────
 def dark_chart(fig, ax):
