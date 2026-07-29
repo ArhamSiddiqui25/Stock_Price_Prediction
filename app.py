@@ -154,7 +154,7 @@ with st.sidebar:
     run = st.button("Run Prediction")
 
     st.markdown("---")
-    st.markdown('<div style="font-size:0.75rem; color:#6B4F2E; text-align:center;">Built by Arham Siddiqui<br>Amity University Lucknow<br>NTCC 2024</div>', unsafe_allow_html=True)
+    st.markdown('<div style="font-size:0.75rem; color:#6B4F2E; text-align:center;">Built by Arham Siddiqui<br>Amity University Lucknow<br>NTCC 2026</div>', unsafe_allow_html=True)
 
 # ── Chart helper ─────────────────────────────────────────────
 def dark_chart(fig, ax):
@@ -268,7 +268,7 @@ if run:
         st.pyplot(fig2)
 
         st.markdown('<hr>', unsafe_allow_html=True)
-        st.markdown('<div style="text-align:center; color:#6B4F2E; font-size:0.8rem;">NTCC Internship Project · Amity University Lucknow · 2024</div>', unsafe_allow_html=True)
+        st.markdown('<div style="text-align:center; color:#6B4F2E; font-size:0.8rem;">NTCC Internship Project · Amity University Lucknow · 2026</div>', unsafe_allow_html=True)
 
 else:
     st.markdown("""
